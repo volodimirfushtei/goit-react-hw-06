@@ -2,9 +2,9 @@ import s from "./ContactForm.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useSelector, useDispatch } from "react-redux";
-import { selectContacts, addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsSlice";
 import { nanoid } from "nanoid"; // Importing nanoid for unique IDs
-
+import { selectContacts } from "../../redux/Contacts/selectors";
 // Validation schema
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -34,10 +34,10 @@ const ContactForm = () => {
 
     if (existingContact) {
       alert(`${values.name} is already in contacts!`);
+      resetForm();
       return;
     }
 
-    // Dispatch the addContact action with a unique ID using nanoid
     dispatch(
       addContact({ id: nanoid(), name: values.name, number: values.number })
     );

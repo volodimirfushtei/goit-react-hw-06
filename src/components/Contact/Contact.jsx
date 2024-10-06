@@ -7,11 +7,11 @@ const Contact = ({ name, number, onDelete }) => {
     <li className={s.contactItem}>
       <div className={s.contact}>
         <span className={s.name}>
-          <RiContactsLine className={s.icon_name} size="24" />
+          <RiContactsLine className={s.icon_name} size="18" />
           {name}:{" "}
         </span>
         <span className={s.number}>
-          <BsTelephone className={s.icon_number} size="24" />
+          <BsTelephone className={s.icon_number} size="18" />
           {number}
         </span>
       </div>

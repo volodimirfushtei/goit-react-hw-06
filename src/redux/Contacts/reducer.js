@@ -1,5 +1,6 @@
 import { deleteContact } from "../../redux/contactsSlice";
 import { addContact } from "../../redux/contactsSlice";
+import { changeFilter } from "../../redux/filtersSlice";
 
 const initialState = {
   contacts: {
@@ -17,7 +18,7 @@ export const contactReducer = (state = initialState, action) => {
         ...state,
         contacts: {
           ...state.contacts,
-          items: [...state.contacts.contacts, action.payload],
+          items: [...state.contacts.items, action.payload],
         },
       };
 
@@ -32,6 +33,20 @@ export const contactReducer = (state = initialState, action) => {
         },
       };
 
+    default:
+      return state;
+  }
+};
+export const filtersReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case changeFilter.type:
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          name: action.payload,
+        },
+      };
     default:
       return state;
   }

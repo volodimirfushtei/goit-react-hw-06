@@ -19,7 +19,7 @@
 }
 .button {
   padding: 10px 16px;
-  background-color: #63d367;
+  background-color: #cec808;
   color: white;
   border: none;
   cursor: pointer;
@@ -29,7 +29,7 @@
   border: 1px solid rgba(24, 23, 23, 0);
   outline: none;
   &:hover {
-    background-color: #08a828;
+    background-color: #c8a20a;
   }
 }
 .input {
@@ -37,7 +37,8 @@
   padding: 10px;
   border: none;
   border-bottom: 1px solid #ccc;
-
+  background-color: #e2dddd;
+  border-radius: 5px;
   font-size: 16px;
   transition: border-bottom 0.3s ease-in-out;
 }
@@ -72,7 +73,7 @@
   gap: 5px;
   font-size: 18px;
   font: 1em sans-serif;
-  color: #0f0f0f;
+  color: #a9a4a4;
   text-align: left;
   flex-direction: column;
 }
