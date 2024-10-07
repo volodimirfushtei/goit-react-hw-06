@@ -1,15 +1,15 @@
 import s from "./ContactList.module.css";
 import Contact from "../Contact/Contact.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice"; // Імпортуємо екшен для видалення контакту
-import { selectContacts } from "../../redux/Contacts/selectors.js"; // Імпортуємо селектор для отримання контактів
+import { deleteContact } from "../../redux/contactsSlice";
+import { selectContacts } from "../../redux/Contacts/selectors.js";
 
 const ContactList = () => {
-  const contacts = useSelector(selectContacts) || []; // Отримуємо список контактів з Redux Store
+  const contacts = useSelector(selectContacts) || [];
   const dispatch = useDispatch();
 
   const handleDeleteContact = (id) => {
-    dispatch(deleteContact(id)); // Викликаємо екшен для видалення контакту
+    dispatch(deleteContact(id));
   };
 
   return (

@@ -24,7 +24,7 @@ const initialValues = {
 };
 
 const ContactForm = () => {
-  const contacts = useSelector(selectContacts); // Get the list of contacts from Redux Store
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const handleAddContact = (values, { resetForm }) => {
